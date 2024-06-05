@@ -1,8 +1,11 @@
 use clap::Parser;
 
+mod constitution;
+use constitution::CONSTITUTION;
+
 /// Simple program to greet a person
 #[derive(Parser, Debug)]
-#[command(author, version, about, long_about = None)]
+#[command(author, version, about, long_about = CONSTITUTION)]
 struct Args {
     /// The path to the file to read, with extension (e.g. `file.law`)
     script: String,
